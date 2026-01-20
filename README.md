@@ -1,3 +1,3 @@
 # nautilus-test
 
-Test repo for ingestion of the nautilus CD tool.
+Test repo for ingestion by the nautilus CD tool.

@@ -18,9 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pass
-        run: echo "This job PASSES"; exit 0;
+        run: |
+          echo "This job PASSES";
+          exit 0;
   fail-job:
     runs-on: ubuntu-latest
     steps:
       - name: Fail
-        run: echo "This job FAILS"; exit 1;
+        run: |
+          echo "This job FAILS";
+          exit 1;

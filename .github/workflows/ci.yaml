@@ -6,7 +6,8 @@ permissions:
 on:
   push:
     branches:
-      - devops/test-commit-read
+      - develop
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -30,4 +31,4 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: kuanfan/nautilus-test-app2:latest
+          tags: kuanfan/nautilus-test-app:latest

@@ -14,6 +14,4 @@ helm -n e52f12-dev upgrade --install hackathon-2026 .
 
 oc -n e52f12-dev rollout restart deployment hackathon-2026-nautilus-test-app
 
-hackathon-sample-app-nautilus-test-app
-
 echo "Deployed! develop branch"

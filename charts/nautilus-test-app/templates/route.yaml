@@ -2,17 +2,17 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: {{ include "frontend.fullname" . }}
+  name: {{ include "nautilus-test-app.fullname" . }}
   labels:
-    {{- include "frontend.labels" . | nindent 4 }}
+    {{- include "nautilus-test-app.labels" . | nindent 4 }}
 spec:
   host: {{ .Values.route.host }}
   to:
     kind: Service
-    name: {{ include "frontend.fullname" . }}
+    name: {{ include "nautilus-test-app.fullname" . }}
     weight: 100
   port:
-    targetPort: web
+    targetPort: http
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect

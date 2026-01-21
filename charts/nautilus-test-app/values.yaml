@@ -114,4 +114,5 @@ tolerations: []
 affinity: {}
 
 route:
+  enabled: true
   host: hackathon-2026.apps.silver.devops.gov.bc.ca

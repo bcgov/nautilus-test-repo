@@ -27,4 +27,4 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: kuanfan/nautilus:latest
+          tags: kuanfan/nautilus-test-app:latest

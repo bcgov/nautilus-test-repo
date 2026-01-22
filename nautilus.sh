@@ -6,10 +6,9 @@ cd charts/nautilus-test-app
 
 oc login --token="${OPENSHIFT_TOKEN}" --server=https://api.silver.devops.gov.bc.ca:6443
 
-if helm -n e52f12-dev status hackathon-2026 >/dev/null 2>&1; then
-  oc -n e52f12-dev rollout restart deployment hackathon-2026-nautilus-test-app
-else
-  helm -n e52f12-dev upgrade --install hackathon-2026 .
-fi
+IMAGE_TAG="${1:-latest}"
+
+helm -n e52f12-dev upgrade --install hackathon-2026 . --set image.tag="${IMAGE_TAG}"
+oc -n e52f12-dev rollout restart deployment hackathon-2026-nautilus-test-app
 
 echo "Deployed! develop branch"

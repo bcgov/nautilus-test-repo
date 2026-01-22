@@ -31,4 +31,6 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: kuanfan/nautilus-test-app:latest
+          tags: |
+            kuanfan/nautilus-test-app:${{ github.sha }}
+            kuanfan/nautilus-test-app:latest

@@ -8,7 +8,7 @@ oc login --token="${OPENSHIFT_TOKEN}" --server=https://api.silver.devops.gov.bc.
 
 IMAGE_TAG="${1:-latest}"
 
-helm -n e52f12-dev upgrade --install hackathon-2026 . --set image.tag="${IMAGE_TAG}"
-oc -n e52f12-dev rollout restart deployment hackathon-2026-nautilus-test-app
+helm -n 09269b-dev upgrade --install hackathon-2026 . --set image.tag="${IMAGE_TAG}"
+oc -n 09269b-dev rollout restart deployment hackathon-2026-nautilus-test-app
 
 echo "Deployed! develop branch"
